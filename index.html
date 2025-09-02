@@ -8,8 +8,7 @@
     <link rel="stylesheet" href=".//css/bootstrap.min.css">
     <link rel="stylesheet" href=".//css/style.css">
     <!-- scripts-->
-    <script src="./js/app.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    
 </head>
 <body data-bs-theme="dark">
     <div class="container">
@@ -30,18 +29,18 @@
                   <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="">
-                            <label for="name">Termék</label>
+                            <input type="text" class="form-control" id="nameField" placeholder="">
+                            <label for="nameField">Termék</label>
                           </div>
                           <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="price" placeholder="">
-                            <label for="price">Egységár (Ft)</label>
+                            <input type="number" class="form-control" id="priceField" placeholder="">
+                            <label for="priceField">Egységár (Ft)</label>
                           </div>
                           <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="db" placeholder="">
-                            <label for="db">Mennyiség</label>
+                            <input type="number" class="form-control" id="countField" placeholder="">
+                            <label for="countField">Mennyiség</label>
                           </div>
-                          <button type="button" class="btn btn-primary mb-3">Hozzáadás</button>
+                          <button type="button" class="btn btn-primary mb-3" id="addBtn">Hozzáadás</button>
 
                     </div>
                   </div>
@@ -60,7 +59,7 @@
                     </tr>
 
                 </thead>
-                <tbody> 
+                <tbody id="itemsList"> 
                     <tr>
                         <td></td>
                         <td></td>
@@ -72,7 +71,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="4">Összesen:</td>
-                        <td class="text-end">0 Ft</td>
+                        <td class="text-end"><strong id="sumLbl">0</strong> Ft</td>
                     </tr>
                 </tfoot>
               </table>
@@ -86,5 +85,7 @@
             <h6>2025.</h6>
         </footer>
     </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
